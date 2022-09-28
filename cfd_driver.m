@@ -15,11 +15,13 @@ u3 = 0.01; v3 = 0;  % 设定3边界速度
 
 %%% Case1 槽道流
 %%%%% 设定边界条件数据BP与BV
+%%% BV：边界节点编号，该节点u, 该节点v
 BV1 =[ NBC1', u1 * ones(size(NBC1))', v1 * ones(size(NBC1))' ];
 BV3 =[ NBC3', u3 * ones(size(NBC3))', v3 * ones(size(NBC3))' ];
 BV = [ BV1; BV3 ];
 P2 = 0;             % 设定边界压强
 P4 = 1000;          % 设定边界压强
+%%% BP：边界单元编号，边界单元上处于边界的边的编号，nx, ny，边界单元上处于边界的边上第一节点压力 第二节点压力
 BP2 = [ EBC2 ,ones(size(EBC2(:,1))) * P2, ones(size(EBC2(:,1))) * P2 ];
 BP4 = [ EBC4 ,ones(size(EBC4(:,1))) * P4, ones(size(EBC4(:,1))) * P4 ];
 BP = [ BP2; BP4 ];

@@ -18,7 +18,7 @@ for ii = 1: n_el
 
         ux_post(k, 1) = ux_k_1(IEN(ii, jj));
         vy_post(k, 1) = vy_k_1(IEN(ii, jj));
-        p_post(k, 1) = p_k_1(IEN(ii, jj));    
+        p_post(k, 1) = p_k_1(IEN(ii, jj));  
         %%%%%% 生成Tecplot后处理数据
 
         k = k + 1;

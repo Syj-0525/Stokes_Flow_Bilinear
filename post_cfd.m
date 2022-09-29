@@ -18,7 +18,7 @@ for ii = 1: n_el
 
         ux_post(k, 1) = ux_k_1(IEN(ii, jj));
         vy_post(k, 1) = vy_k_1(IEN(ii, jj));
-        p_post(k, 1) = p_k_1(IEN(ii, jj));
+        p_post(k, 1) = p_k_1(IEN(ii, jj));    
         %%%%%% 生成Tecplot后处理数据
 
         k = k + 1;
@@ -33,4 +33,4 @@ post_node = [1: 1: size(post_data, 1)];
 
 clear n_el IEN CtrlPts K B N_matrix n_Func NO_node No_node_post p_post      % 清除多余变量
 clear viscosity p4 ii jj k p_k_1 ux_k_1 vy_k_1 ux_post vy_post ee x         % 清除多余变量
-save result_of_n1                                                           % 存储结果
+save result                                                                 % 存储结果

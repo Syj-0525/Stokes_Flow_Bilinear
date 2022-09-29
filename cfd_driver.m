@@ -45,7 +45,7 @@ BP = [ BP2; BP4 ];
 
 clear BV1 BV3 BV2 BV4 BP1 BP2 BP3 BP4 P2 P4
 clear EBC1 EBC2 EBC3 EBC4
-clear NBC1 NBC2 NBC3 NBC4 EBC1 EBC2 EBC3 EBC4
+clear NBC1 NBC2 NBC3 NBC4
 clear u1 v1 u3 v3 u2 v2 u4 v4
 %%%%%% 设定边界条件
 
@@ -58,11 +58,7 @@ x = Linear_solver(K, G);
 %%%%%% 求解线性方程组
 
 %%%%%% 清理变量
-clear A11 A12 A21 A22 B1 B2 C1 C2 
-clear Ae11 Ae12 Ae21 Ae22 Ce1 Ce2 Be1 Be2
-clear Fe1 Fe2 F1 F2 BP BV 
-clear eleCtrlPts NO_u_node NO_v_node K_nrows
-clear ee jj aa bb
+clear BP BV viscosity
 %%%%%% 清理变量
 
 % 存储解向量

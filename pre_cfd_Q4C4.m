@@ -80,7 +80,7 @@ plot_mesh(IEN, CtrlPts);
 
 %%%%%%% 清楚多余变量
 clear dx dy H L nel_x nel_y ii jj k ee
-clear theta No_node
+clear theta NO_node
 clear thetax1 thetax2 thetax3 thetax4
 clear thetay1 thetay2 thetay3 thetay4
 %%%%%%% 清楚多余变量

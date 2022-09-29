@@ -32,5 +32,5 @@ post_node = [1: 1: size(post_data, 1)];
 %%%%%% 输出Tecplot后处理结果
 
 clear n_el IEN CtrlPts K B N_matrix n_Func NO_node No_node_post p_post      % 清除多余变量
-clear viscosity p4 ee aa k p_k_1 ux_k_1 vy_k_1 ux_post vy_post xlabel       % 清除多余变量
+clear viscosity p4 ee aa k p_k_1 ux_k_1 vy_k_1 ux_post vy_post x            % 清除多余变量
 save result                                                                 % 存储结果

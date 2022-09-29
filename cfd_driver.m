@@ -62,7 +62,7 @@ clear A11 A12 A21 A22 B1 B2 C1 C2
 clear Ae11 Ae12 Ae21 Ae22 Ce1 Ce2 Be1 Be2
 clear Fe1 Fe2 F1 F2 BP BV 
 clear eleCtrlPts NO_u_node NO_v_node K_nrows
-clear ii jj aa bb u v
+clear ee jj aa bb u v
 %%%%%% 清理变量
 
 % 存储解向量

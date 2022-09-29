@@ -20,9 +20,9 @@ dy = H/nel_y; % 数值方向网格间距
 
 %%%%%%% 节点分布编号
 NO_node = zeros(nel_x + 1, nel_y + 1);
-for i = 1:1:nel_y + 1
-    for j = 1:1:nel_x + 1
-    NO_node(i, j) = (i - 1) * (nel_x + 1) + j;
+for ii = 1:1:nel_y + 1
+    for jj = 1:1:nel_x + 1
+    NO_node(ii, jj) = (ii - 1) * (nel_x + 1) + jj;
     end
 end
 %%%%%%% 节点分布编号
@@ -30,10 +30,10 @@ end
 %%%%%%% CtrlPts(双线性单元结点坐标数据)
 %%%%%%% 四边形双线性单元CtrlPts生成
 CtrlPts = zeros(n_Func, 2);
-for i = 1:1:nel_y + 1
-    for j = 1:1:nel_x + 1
-        CtrlPts(NO_node(i, j), 1) = dx * (j - 1);
-        CtrlPts(NO_node(i, j), 2) = dy * (i - 1);
+for ii = 1:1:nel_y + 1
+    for jj = 1:1:nel_x + 1
+        CtrlPts(NO_node(ii, jj), 1) = dx * (jj - 1);
+        CtrlPts(NO_node(ii, jj), 2) = dy * (ii - 1);
     end
 end
 %%%%%%% 四边形双线性单元CtrlPts生成
@@ -42,10 +42,10 @@ end
 %%%%%%% 四边形双线性单元IEN生成
 IEN = zeros(n_el, 4);
 ee = 0;
-for i = 1:nel_y
-    for j = 1:nel_x
+for ii = 1:nel_y
+    for jj = 1:nel_x
         ee = ee + 1;
-        IEN(ee,:) = [NO_node(i, j), NO_node(i, j + 1), NO_node(i + 1, j + 1), NO_node(i + 1, j),];
+        IEN(ee,:) = [NO_node(ii, jj), NO_node(ii, jj + 1), NO_node(ii + 1, jj + 1), NO_node(ii + 1, jj),];
     end
 end
 %%%%%%% 四边形双线性单元IEN生成
@@ -75,11 +75,11 @@ EBC4 = [ (1:nel_x:nel_x * (nel_y - 1) + 1)', 4 * ones(size([1:nel_y]')), ones(ne
 %%%%%%% EBC数据生成
 
 %%%%%%% 调用四边形网格绘制程序
-% plot_mesh(IEN, CtrlPts);
+plot_mesh(IEN, CtrlPts);
 %%%%%%% 调用四边形网格绘制程序
 
 %%%%%%% 清楚多余变量
-clear dx dy H L nel_x nel_y i j k ee
+clear dx dy H L nel_x nel_y ii jj k ee
 clear theta No_node
 clear thetax1 thetax2 thetax3 thetax4
 clear thetay1 thetay2 thetay3 thetay4
